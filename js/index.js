@@ -13,6 +13,7 @@ navBar.forEach(nav => {
     nav.addEventListener('click', e => {
         nav.style.backgroundColor = 'yellow'
         event.preventDefault()
+        console.log('prevent Default in action')
     })
 })
 
@@ -53,4 +54,25 @@ title.addEventListener('mouseover', e => {
     setTimeout(()=> {
         e.target.style.color = ''
     }, 400)
+})
+
+
+function zoom(event) {
+    event.preventDefault();
+  
+    scale += event.deltaY * -0.01;
+  
+    scale = Math.min(Math.max(.125, scale), 4);
+  
+    el.style.transform = `scale(${scale})`;
+  }
+  
+  let scale = 1;
+  const el = document.querySelector('.img-fluid');
+  el.onwheel = zoom;
+
+  let funBusGone = document.querySelector('header img');
+funBusGone.addEventListener('drag', function(event){
+    console.log(`Bus selected`);
+    event.target.style.display = 'none';
 })
