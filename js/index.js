@@ -85,3 +85,9 @@ paragraphCopied.forEach(function(item){
     });
 
 });
+
+
+window.addEventListener('resize', () => {
+  adventureAwaitsImg.src='https://images.unsplash.com/photo-1507984211203-76701d7bb120?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ'
+})
+
