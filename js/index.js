@@ -76,3 +76,12 @@ funBusGone.addEventListener('drag', function(event){
     console.log(`Bus selected`);
     event.target.style.display = 'none';
 })
+
+let paragraphCopied = document.querySelectorAll('p')
+paragraphCopied.forEach(function(item){
+    item.addEventListener('copy', function(){
+        console.log(`copied paragraph!!`);
+        event.target.style.fontSize = '3rem';
+    });
+
+});
